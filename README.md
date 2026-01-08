@@ -64,3 +64,13 @@ If you're clonig or forking this repository then you can use below commands afte
 ```
 > npm install
 ```
+
+# Run your first test!
+
+We'll load test the API that is running on Artillery's website which returns ascii pictures of things at `http://asciiart.artillery.io:8080 `.
+
+- `config` is what defines how our load test will run, e.g. the URL of the system we’re testing, how much load will be generated, any plugins we want to use, and so on.
+
+- `scenarios` is where we define what the virtual users created by Artillery will do. A scenario is usually a sequence of steps that describes a user session in the app.
+
+More information [here](https://www.artillery.io/docs/get-started/first-test).
