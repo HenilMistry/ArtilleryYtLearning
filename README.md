@@ -73,4 +73,16 @@ We'll load test the API that is running on Artillery's website which returns asc
 
 - `scenarios` is where we define what the virtual users created by Artillery will do. A scenario is usually a sequence of steps that describes a user session in the app.
 
+- You can use the following command to run the test.
+
+```
+npx artillery run <file-path>
+```
+
+- You can use the following command to record the test on WebUI.
+
+```
+npx artillery run <file-path> --record --key <api-key>
+```
+
 More information [here](https://www.artillery.io/docs/get-started/first-test).
