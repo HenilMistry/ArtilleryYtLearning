@@ -1,10 +1,9 @@
-name: Artillery Socket.IO Load Test
+name: Artillery Load Test Trigger
 
 on:
   push:
     branches:
       - main
-      - lesson3
  
 jobs:
   artillery:
