@@ -1,4 +1,4 @@
-name: Artillery Load Test
+name: Artillery Load Test Trigger
 
 on:
   push:
