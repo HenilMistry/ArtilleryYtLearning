@@ -17,7 +17,7 @@ jobs:
       - name: Execute load tests
         uses: artilleryio/action-cli@v1
         with:
-          command: run tests/performance/socket-io.yml
+          command: run test/test-to-run-on-ci.yml --output ./report.json
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
