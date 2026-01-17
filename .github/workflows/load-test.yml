@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - lesson3
+      - lesson3-pro
  
 jobs:
   artillery:
@@ -17,7 +18,7 @@ jobs:
       - name: Execute load tests
         uses: artilleryio/action-cli@v1
         with:
-          command: run test/test-to-run-on-ci.yml --output ./report.json
+          command: run test/test-to-run-on-ci.yml --output ./report.json --name TestFromGithubActions --record --key API_KEY_ARTILLERY
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
