@@ -1,11 +1,9 @@
-name: Artillery Socket.IO Load Test
+name: Artillery Load Test
 
 on:
   push:
     branches:
       - main
-      - lesson3
-      - lesson3-pro
  
 jobs:
   artillery:
@@ -18,7 +16,7 @@ jobs:
       - name: Execute load tests
         uses: artilleryio/action-cli@v1
         with:
-          command: run test/test-to-run-on-ci.yml --output ./report.json --name TestFromGithubActions --record --key ${{ secrets.API_KEY_ARTILLERY }}
+          command: run test/test-to-run-on-ci.yml --output ./report.json --name TestFromYouTube --record --key ${{ secrets.API_KEY_ARTILLERY }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
