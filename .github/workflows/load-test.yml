@@ -1,0 +1,26 @@
+name: Artillery load test on push
+
+on:
+  push:
+    branch:
+      - main
+
+jobs:
+  artillery:
+    runs-on: ubuntu-latest
+
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: Execute load tests
+      uses: artilleryio/action-cli@v1
+      with:
+        command: run test/test-to-run-on-ci.yml --ouput ./report.json
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      if: always()
+      with: 
+        name: artillery-report
+        path: ./report.json
