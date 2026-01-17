@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - lesson3
  
 jobs:
   artillery:
